@@ -1,0 +1,461 @@
+.HomeScreen{
+    width: 100%;
+    height: 100%;
+}
+
+.Header{
+    width: 100%;
+    height: 70px;
+    background-color: #1E1D61;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    margin-top: 0%;
+    padding-top: 0%;
+    top: 0;
+    left: 0;
+}
+.HeaderLogo img{
+    height: 70px;
+}
+.SearchInput{
+  width: 300px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+}
+.HeaderButton{
+    width: 148px;
+    height: 33px;
+    border-radius: 10px;
+    background: rgba(244, 232, 232, 0.25);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin: 10px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 20px;
+    border: none;
+    color: #D9D9D9;
+    text-align: center;
+    font-family: Lexend;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+}
+.HeaderButton:hover{
+    background-color: #D9D9D9;
+    color: #1E1D61;
+}
+
+.HomeScreenIntro{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 450px;
+    margin-top: 20px;
+    justify-content: space-between;
+    padding-top: 100px;
+    
+}
+.HomeScreenMenu{
+    width: 20%;
+    height: 100%;
+    flex-shrink: 0;
+    background: #D9D9D9;
+    margin: 10px;
+    border-radius: 10px;
+    margin-left: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.HSMenuTitle{
+    text-align: center;
+    color:#FE0000;
+    font-size: 40px;
+    font-weight:600;
+    font-family: Lexend;
+}
+
+hr{
+    border-color: #1E1D61;
+    border-width: 1px;
+    margin-top: 0px;
+    padding: 0;
+}
+.MenuListContainer{
+    text-decoration: none;
+    list-style-type: none;
+}
+.MenuList{
+    text-align: left;
+    padding: 10px;
+    font-size: 15px;
+    color: black;
+    font-weight: 400;
+    font-family:Lexend;
+    border-bottom: 1px solid #462626;
+    cursor: pointer;
+}
+.MenuListContainer li:hover {
+    background-color: #f0f0f0; /* Change the background color on hover */
+  }
+
+  .HomeScreenBanner{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background-color: #0073e6;
+    text-align: center;
+
+  }
+  .BannerButton{
+    background-color: rgb(167, 17, 17) ;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: Lexend;
+  }
+  .BannerButton:hover {
+    background-color: #ff6600; /* Change button background color on hover */
+    transform: scale(1.05); /* Add a scale effect on hover */
+    /* You can add other animation properties here, like rotation, box-shadow, etc. */
+  }
+
+  .HomeScreenAds{
+    width: 20%;
+    height: 100%;
+    margin: 10px;
+  }
+  .Seminars{
+    height: 50%;
+    background: #D9D9D9;
+    border-radius: 10px;
+  }
+  .Adverts{
+    height: 45%;
+    background: #D9D9D9;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+  .SeminarTitle{
+    text-align: center;
+    text-align: center;
+    color:#FE0000;
+    font-size: 20px;
+    font-weight:400;
+    font-family: Lexend;
+  }
+  .SeminarsContainer{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #462626;
+  }
+  .SeminarImage{
+    width: 30%;
+    height: 60px;
+    background-color: #f0f0f0;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+  .SeminarData{
+    text-align: center;
+  }
+  h5, h7 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  h8{
+    text-align: justify;
+  }
+
+  .WhatWeOffer{
+    width: 100%;
+    height: fit-content;
+    margin-top: 30px;
+    justify-content: space-around;
+    align-self: center;
+    text-align: center;
+    align-items: center;
+  }
+  .WWOH1{
+    text-align: center;
+    color: #0073e6;
+    font-family: Lexend;
+  }
+  .WWODetails{
+    width: 90%;
+    height: fit-content;
+    padding: 10px;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .WWORows{
+    width: 50%;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+  }
+  .WWOColumns{
+    width: 95%;
+    height: fit-content;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .WWOImages{
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+  }
+  .WWOParagraphs{
+    font-family: Lexend;
+    font-size: 15px;
+    font-weight: 400;
+    color: #1E1D61;
+  }
+  .WWOColumns h3 {
+    text-align: left;
+    color: #1E1D61;
+    font-family: Lexend;
+    margin: 0px;
+    padding: 0px;
+  }
+  .WWOWords{
+    margin: 5px;
+  }
+  .partners{
+    height: 300px;
+    background-color: #0073e6;
+  }
+  .partners h1{
+    color:white ;
+    font-family: Lexend;
+    text-align: center;
+  }
+.partnersLogosContainer{
+    width: 90%;
+    height: 200px;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.partnersLogo{
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+.partnersLogo img{
+    width: 100px;
+    height: 100px;
+}
+.partnersLogo h5{
+    font-family: Lexend;
+    font-weight: 500;
+    font-size: 20px;
+    color: white;
+}
+
+.BestSelling h1{
+    text-align: center;
+    color: #0073e6;
+    font-family: Lexend;
+}
+.bestSellingProducts{
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.bestSellingCard{
+    width: 300px;
+    height: 400px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 20px 10px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+.bestSellingCard:hover {
+  transform: scale(1.1);
+}
+
+.bestSellingCard img {
+    width: 300px;
+    height: 300px;
+}
+
+.bestSellingCard h8{
+    color: #1E1D61;
+    font-size: 20px;
+    font-family: Lexend;
+    font-weight: 700;
+    margin: 10px;
+}
+
+.bestSellingCard button{
+    border: none;
+    width: 200px;
+    height: 30px;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+    align-self: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: #f0f0f0;
+    font-size: 15px;
+    font-family: Lexend;
+    background-color: #1E1D61;
+    cursor: pointer;
+}
+
+.bestSellingCard button:hover{
+    background-color:#0073e6; /* Change button background color on hover */
+    transform: scale(1.05);
+    color: black;
+    font-weight: 800;
+}
+
+.Footer{
+    background-color: #1E1D61;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.ContactUs {
+  width: 30%;
+  margin: 5px;
+}
+.ContactUs h1{
+  text-align: center;
+  font-family: Lexend;
+  font-weight: 500;
+  font-size: 20;
+  top: 0;
+  margin: 0;
+  color:#FE0000;
+}
+.ContactUs hr{
+  color: #f0f0f0;
+  background-color: #f0f0f0;
+}
+.icons-Details{
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+  width: 100%;
+  margin-bottom: 10px;
+
+}
+.icons-Details img{
+  width: 28px;
+  height: 28px;
+  margin: 5px;
+}
+.icons-Details h5{
+  padding: 10px;
+  color: #f0f0f0;
+}
+.socialIcons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.socialIcons img{
+  width: 28px;
+  height: 28px;
+  margin: 5px;
+  cursor: pointer;
+}
+.Location{
+  width: 30%;
+  margin: 5px;
+}
+.Location h1{
+  text-align: center;
+  font-family: Lexend;
+  font-weight: 500;
+  font-size: 20;
+  top: 0;
+  margin: 0;
+  color:#FE0000;
+}
+.location-Details{
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  width: 100%;
+  margin-bottom: 10px;
+
+}
+.location-Details h5{
+  color: #f0f0f0;
+}
+.locationTime{
+  width: 70%;
+  height: fit-content;
+  padding: 0%;
+  margin: 0%;
+
+}
+.locationTime h4{
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  color: #FE0000;
+  
+}
+.locationTime h5{
+  padding-top: 0%;
+  margin-top: 0%;
+  font-weight: 400;
+  font-family: Lexend;
+}
+.QuickLinks{
+  width: 30%;
+  margin: 5px;
+}
+.QuickLinks h1{
+  text-align: center;
+  font-family: Lexend;
+  font-weight: 500;
+  font-size: 20;
+  top: 0;
+  margin: 0;
+  color:#FE0000;
+}
+.QuickLinks h4{
+  text-align: center;
+  margin-top: 0%;
+  margin-bottom: 10px;
+  font-family: Lexend;
+  color: #f0f0f0;
+  cursor: pointer;
+}
+.QuickLinks h4:hover{
+  color: #FE0000;
+}
