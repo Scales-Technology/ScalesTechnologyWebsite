@@ -1,0 +1,193 @@
+.aboutUsTitle{
+    padding-top: 100px;
+    text-align: center;
+    font-family: Lexend;
+    color: red;
+    border: 1px solid rgb(61, 61, 65);
+    background-color: rgb(61, 61, 65);
+}
+.aboutusintro{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(61, 61, 65);
+    flex-wrap: wrap;
+    height: max-content;
+}
+.leftside{
+    width: 50%;
+}
+.rightside{
+    width: 50%;
+}
+.briefIntro{
+    padding: 10px;
+    color: white;
+    font-family: Lexend;
+
+}
+.founders{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.founderDetails{
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+
+}
+.founderDetails img {
+    width: 30%;
+
+}
+
+.founderDetail{
+    width: 70%;
+    color: white;
+    font-family: Lexend;
+    
+}
+.founderDetail h5{
+    float: left;
+    text-align: left;
+    font-size: 20px;
+}
+.founderDetail p{
+    font-size: 15px;
+    font-weight: 400;
+    float: left;
+    text-align: left;
+    justify-content: left;
+    margin-top: 30px;
+    margin-left: 0%;
+    padding-left: 0%;
+}
+.rightside{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    justify-items: center;
+    font-family: Lexend;
+}
+.rightside img {
+    width: 426px;
+    height: 287px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+.moreinfo{
+    width: 385px;
+    height: 186px;
+    border-radius: 20px;
+    background: white;
+    text-align: center;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: -50px;
+    z-index: 1;
+    position: absolute;
+    margin-left: 150px;
+
+}
+.moreinfo h4{
+    font-family: Lexend;
+    font-size: smaller;
+    color: blue;
+
+}
+.moreinfo h5{
+    font-family: Lexend;
+    font-size: larger;
+    color: blue;
+}
+.OurTeam{
+    font-family: Lexend;
+    align-items: center;
+    text-align: center;
+    color: #1E1D61;
+}
+.OurTeam h3{
+    font-size: 30px;
+
+}
+.OurTeamsCard{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.card{
+    width: 285px;
+    height:fit-content;
+    flex-shrink: 0;
+    background-color: rgba(255, 255, 255, 0.8);;
+    margin: 5px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(133, 99, 99, 0.8);
+    font-family: Lexend;
+}
+.card img {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+}
+.card h6{
+    font-size: 18px;
+    font-weight: 700;
+    margin: 5px;
+    padding: 0px;
+}
+.card p{
+    font-size: 10px;
+    font-weight: 500;
+    margin: 5px;
+    font-family: Lexend;
+}
+
+@media only screen  and (max-width: 768px) {
+.aboutusintro{
+    flex-direction: column;
+    height: fit-content;
+    margin-bottom: 150px;
+}
+.leftside{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+}
+.rightside{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+}
+.rightside img{
+    width: 100%;
+    height: fit-content;
+    
+}
+.moreinfo{
+    margin-left: 50px;
+    background-color: #1E1D61;
+    color: aliceblue;
+    width: 285px;
+    height: fit-content;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.OurTeamsCard{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+}

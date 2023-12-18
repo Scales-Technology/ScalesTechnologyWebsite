@@ -1,0 +1,254 @@
+.CartContainer{
+    width: 100%;
+    height: 100%;
+}
+.CartTitle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 100px;
+    margin: 0;
+    padding-bottom: 0;
+}
+.CartTitle h1{
+    text-align: left;
+    font-family: Lexend;
+    color: red;
+}
+
+.CartTitle button{
+    width: 150px;
+    height: 30px;
+    color: white;
+    font-family: Lexend;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    align-self: center;
+    background-color: #1E1D61;
+    bottom: 0%;
+    cursor: pointer;
+}
+.CartTitle button:hover{
+    transform: scale(1.1);
+}
+.CartProductsContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 20%;
+}
+.CartProducts{
+    width: 848px;
+    height: 200px;    
+    background: rgba(37, 37, 37, 0.5);
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+}
+
+.CartProducts img{
+    width: 30%;
+    margin: 5px;
+    
+}
+.cartproductdetails{
+    margin: 10px;
+    width: 70%;
+
+
+}
+.cpdtop{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: fit-content;
+    padding: 0;
+}
+
+.cpdtop img {
+    width: 33px;
+    height: 33px;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+.cpdtop img:hover{
+    transform: scale(1.1);
+}
+
+.cpdtop h3{
+    font-family: Lexend;
+    color: #1E1D61;
+    margin: 0;
+    padding: 0;
+}
+.cartproductdetails p{
+    font-family: Lexend;
+    font-size: 12px;
+    color: white;
+}
+.cpdbottom{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    width: 50%;
+    float: right;
+    margin-top: 10px;
+}
+
+.cpdbottom h5{
+    font-size: 20px;
+    font-family: Lexend;
+    font-weight: 400;
+    color: #1E1D61;
+    margin-right: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    
+}
+.cpdbottom img{
+    width: 33px;
+    height: 33px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    cursor: pointer;
+
+}
+.cpdbottom img:hover{
+    transform: scale(1.1);
+}
+.cpdbottom p{
+    font-family: Lexend;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+/* Modal.css */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    justify-items: center;
+  }
+  
+  .modal {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    align-self: center;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 30%;
+    margin-top: 100px;
+    margin-left: 500px;
+    height: fit-content;
+    
+  }
+  
+  .close-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: red;
+    font-size: 50px;
+  }
+  
+  .modal h2{
+    color: #1E1D61;
+    font-size: 20px;
+    font-family: Lexend;
+  }
+  .modal input{
+    width: 80%;
+    height: 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(24, 22, 22, 0.20);
+    padding: 10px;
+  }
+
+  .modal h8{
+    font-family: Lexend;
+    font-size: 15;
+    color: #1E1D61;
+    margin-bottom: 0px;
+    text-align: left;
+    float: left;
+    align-items: start;
+    margin-left: 0px;
+    padding-left: 0px;
+    justify-content: flex-start;
+  }
+  .modal p{
+    font-family: Lexend;
+    font-size: 12px;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .modal button{
+    margin: 10px;
+  }
+
+  @media only screen  and (max-width: 768px) {
+    .CartProducts{
+        width: 90%;
+        flex-wrap: wrap;
+        height: fit-content;
+        margin: 10px
+    }
+    .cpdbottom{
+        float: left;
+    }
+    .cpdtop img {
+        top: 0;
+        float: right;
+    }
+    .modal {
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        align-self: center;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        width: 90%;
+        margin-top: 200px;
+        margin-left: 5px;
+        margin-right: 5px;
+        height: fit-content;
+        
+      }
+      .CartTitle Button{
+        width: fit-content;
+        height: fit-content;
+      }
+  }

@@ -15,17 +15,21 @@
     padding-top: 0%;
     top: 0;
     left: 0;
+    z-index: 3;
 }
 .HeaderLogo img{
     height: 70px;
 }
 .SearchInput{
-  width: 300px;
-  height: 30px;
+  width: 400px;
+  height: 10px;
   border: none;
-  border-radius: 5px;
-  margin-top: 20px;
+  border-radius: 10px;
+  margin-top: 10px;
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+  margin-right: 20px;
+  font-family: Lexend;
+  padding: 15px;
 }
 .HeaderButton{
     width: 148px;
@@ -48,6 +52,61 @@
     line-height: normal;
     cursor: pointer;
 }
+.dropdown-menu {
+  position: relative;
+  right: 0;
+}
+
+.menu-icon {
+  cursor: pointer;
+  size: 10px;
+  color: #f0f0f0;
+  font-size: 30px;
+  display: none;
+}
+.mlistcontainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.mlistcontainer li{
+  padding: 10px;
+  list-style: none;
+  text-decoration: none;
+  color: white;
+  font-family: Lexend;
+  cursor: pointer;
+}
+
+.menu-list {
+  list-style-type: none;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  z-index: 1;
+  font-family: Lexend;
+  font-weight: 500;
+}
+.menu-list a{
+  text-decoration: none;
+}
+
+.menu-list li {
+  padding: 10px;
+  cursor: pointer;
+  padding: 15px;
+}
+
+.menu-list li:hover {
+  background-color: #f1f1f1;
+}
+
 .HeaderButton:hover{
     background-color: #D9D9D9;
     color: #1E1D61;
@@ -105,19 +164,34 @@ hr{
 .MenuListContainer li:hover {
     background-color: #f0f0f0; /* Change the background color on hover */
   }
-
-  .HomeScreenBanner{
-    width: 60%;
-    height: 100%;
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    background-color: #0073e6;
-    text-align: center;
-
+  .MenuListContainer a{
+    text-decoration: none;
   }
-  .BannerButton{
-    background-color: rgb(167, 17, 17) ;
+  .HomeScreenBanner {
+    position: relative;
+    width: 60%;
+    height: 450px; /* Use 100% of the viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .slider-image {
+    width: 100%; /* Make the images take the full width of their container */
+    height: 450px; /* Make the images take the full height of their container */
+    object-fit: cover; /* Preserve aspect ratio while covering the entire container */
+  }
+  
+  .slider-container {
+    position: relative;
+    width: 100%; /* Make sure the slider container takes the full width of the parent */
+  }
+  
+  .BannerButton {
+    position: absolute;
+    z-index: 2;
+    background-color: rgb(167, 17, 17);
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -125,25 +199,30 @@ hr{
     cursor: pointer;
     border-radius: 10px;
     font-family: Lexend;
+    margin-top: 20px;
   }
+  
   .BannerButton:hover {
-    background-color: #ff6600; /* Change button background color on hover */
-    transform: scale(1.05); /* Add a scale effect on hover */
-    /* You can add other animation properties here, like rotation, box-shadow, etc. */
+    background-color: #ff6600;
+    transform: scale(1.05);
   }
-
+  
+  
+  
   .HomeScreenAds{
     width: 20%;
     height: 100%;
     margin: 10px;
   }
   .Seminars{
-    height: 50%;
+    height: 100%;
     background: #D9D9D9;
     border-radius: 10px;
+    margin: 5px;
+    width: 20%;
   }
   .Adverts{
-    height: 45%;
+    height: 90%;
     background: #D9D9D9;
     border-radius: 10px;
     margin-top: 10px;
@@ -160,6 +239,10 @@ hr{
     display: flex;
     flex-direction: row;
     border-bottom: 1px solid #462626;
+  }
+  .SeminarsContainer img{
+    width: 100%;
+    margin-top: 40px;
   }
   .SeminarImage{
     width: 30%;
@@ -189,10 +272,11 @@ hr{
     align-self: center;
     text-align: center;
     align-items: center;
+    background-color: #0073e6;
   }
   .WWOH1{
     text-align: center;
-    color: #0073e6;
+    color:white;
     font-family: Lexend;
   }
   .WWODetails{
@@ -209,6 +293,7 @@ hr{
     margin: 5px;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap
   }
   .WWOColumns{
     width: 95%;
@@ -216,22 +301,23 @@ hr{
     margin: 10px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap
   }
 
   .WWOImages{
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     margin: 5px;
   }
   .WWOParagraphs{
     font-family: Lexend;
-    font-size: 15px;
+    font-size: 10px;
     font-weight: 400;
-    color: #1E1D61;
+    color: white;
   }
   .WWOColumns h3 {
     text-align: left;
-    color: #1E1D61;
+    color: white;
     font-family: Lexend;
     margin: 0px;
     padding: 0px;
@@ -240,21 +326,21 @@ hr{
     margin: 5px;
   }
   .partners{
-    height: 300px;
-    background-color: #0073e6;
+    height: auto;
   }
   .partners h1{
-    color:white ;
+    color:#0073e6 ;
     font-family: Lexend;
     text-align: center;
   }
 .partnersLogosContainer{
     width: 90%;
-    height: 200px;
+    height: fit-content;
     margin-left: 5%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .partnersLogo{
     width: 150px;
@@ -281,14 +367,15 @@ hr{
     font-family: Lexend;
 }
 .bestSellingProducts{
-    height: 600px;
+    height: fit-content;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .bestSellingCard{
-    width: 300px;
-    height: 400px;
+    width: 200px;
+    height: 300px;
     margin: 10px;
     display: flex;
     flex-direction: column;
@@ -297,18 +384,15 @@ hr{
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
 }
-.bestSellingCard:hover {
-  transform: scale(1.1);
-}
 
 .bestSellingCard img {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 150px;
 }
 
 .bestSellingCard h8{
     color: #1E1D61;
-    font-size: 20px;
+    font-size: 15px;
     font-family: Lexend;
     font-weight: 700;
     margin: 10px;
@@ -316,7 +400,7 @@ hr{
 
 .bestSellingCard button{
     border: none;
-    width: 200px;
+    width: 150px;
     height: 30px;
     align-items: center;
     text-align: center;
@@ -340,10 +424,10 @@ hr{
 
 .Footer{
     background-color: #1E1D61;
-    height: 200px;
+    height: fit-content;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .ContactUs {
@@ -366,7 +450,7 @@ hr{
 .icons-Details{
   display: flex;
   flex-direction: row;
-  height: 30px;
+  
   width: 100%;
   margin-bottom: 10px;
 
@@ -376,9 +460,17 @@ hr{
   height: 28px;
   margin: 5px;
 }
+.tellink{
+  text-decoration: none;
+  color: white;
+}
 .icons-Details h5{
   padding: 10px;
+  font-family: Lexend;
   color: #f0f0f0;
+  text-decoration: none;
+  text-decoration-color: #ccc;
+  list-style: none;
 }
 .socialIcons{
   display: flex;
@@ -394,6 +486,7 @@ hr{
 .Location{
   width: 30%;
   margin: 5px;
+  height: fit-content;
 }
 .Location h1{
   text-align: center;
@@ -407,10 +500,12 @@ hr{
 .location-Details{
   display: flex;
   flex-direction: row;
-  height: 40px;
   width: 100%;
   margin-bottom: 10px;
 
+}
+.location-Details img {
+  height: 30px;
 }
 .location-Details h5{
   color: #f0f0f0;
@@ -458,4 +553,195 @@ hr{
 }
 .QuickLinks h4:hover{
   color: #FE0000;
+}
+
+@media only screen  and (max-width: 768px) {
+ 
+  
+   .Header{
+    height: 80px;
+    align-items: center;
+   }
+    .HeaderLogo img{
+      height: 60px;
+    }
+    .SearchInput {
+      padding: 5px;
+      height: 5px;
+      display: none;
+    }
+    .mlistcontainer{
+      display: none;
+    }
+    .menu-icon {
+      cursor: pointer;
+      size: 10px;
+      color: #f0f0f0;
+      font-size: 30px;
+      display: block;
+    }
+    .Seminars{
+      display: none;
+    }
+    .HomeScreenIntro{
+      padding-top: 0px;
+      height: fit-content;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      padding: 0px;
+      margin: 0px;
+      flex-direction: column;
+      width: 100%;
+
+
+    }
+    .HomeScreenMenu{
+      display: none;
+    }
+    .HomeScreenBanner{
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      width: 100%;
+      height: 250px;
+
+    }
+    .HomeScreenAds{
+      display: none;
+    }
+    .slider-container{
+      height: 250px;
+      width: 100%;
+    }
+    .slider-image{
+      height: 250px;
+      width: 100%;
+    }
+    .WhatWeOffer{
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+    .WWOH1{
+      text-align: center;
+      color: white;
+      font-family: Lexend;
+    }
+    .WWODetails{
+      height: fit-content;
+      padding: 0px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+    }
+  
+    .WWORows{
+      width: 90%;
+      margin: 5px;
+      display: flex;
+      flex-direction: column;
+    }
+    .WWOColumns{
+      width: 95%;
+      height: fit-content;
+      margin: 0px;
+      display: flex;
+      flex-direction: row;
+    }
+  
+    .WWOImages{
+      width: 100px;
+      height: 100px;
+      margin: 5px;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+    }
+    .WWOParagraphs{
+      font-family: Lexend;
+      font-size: 13px;
+      font-weight: 400;
+      color: white;
+    }
+    .WWOColumns h3 {
+      text-align: center;
+      color: white;
+      font-family: Lexend;
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    .bestSellingProducts{
+      align-items: center;
+      text-align: center;
+      justify-content: space-around;
+    }
+    .bestSellingCard{
+      width: 100%;
+      height: 500px;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+    }
+    .bestSellingCard img {
+      width: 300px;
+      height: 300px;
+  }
+  
+  .bestSellingCard h8{
+      color: #1E1D61;
+      font-size: 15px;
+      font-family: Lexend;
+      font-weight: 700;
+      margin: 10px;
+  }
+  
+  .bestSellingCard button{
+      border: none;
+      width: 90%;
+      padding: 10px;
+      height: 30px;
+      align-items: center;
+      text-align: center;
+      margin: 10px;
+      align-self: center;
+      justify-content: center;
+      border-radius: 10px;
+      color: #f0f0f0;
+      font-size: 15px;
+      font-family: Lexend;
+      background-color: #1E1D61;
+      cursor: pointer;
+  }
+.partners{
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.partnersLogosContainer{
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.Footer{
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.ContactUs{
+  width: 95%;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.Location{
+  width: 95%;
+}
+.QuickLinks{
+  width: 95%;
+}
 }
